@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/space_4x" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/space_4x" />
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_4x"
+        android:gravity="center"
+        android:text="@string/welcome_to_shoe_store"
+        android:textSize="@dimen/text_size_headline"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/description_text_view"
+        app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
+        app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline" />
+
+    <TextView
+        android:id="@+id/description_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_4x"
+        android:gravity="center"
+        android:text="@string/this_is_the_welcome_page"
+        android:textSize="@dimen/text_size_subtitle"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/title_text_view"
+        app:layout_constraintBottom_toTopOf="@id/go_instructions_button"
+        app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
+        app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline" />
+
+    <Button
+        android:id="@+id/go_instructions_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_6x"
+        android:text="@string/go_to_instructions"
+        app:layout_constraintTop_toBottomOf="@id/description_text_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
+        app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

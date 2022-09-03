@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/space_4x" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/space_4x" />
+
+    <TextView
+        android:id="@+id/shoe_name_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/shoe_name"
+        android:padding="@dimen/space_2x"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
+        app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline" />
+
+    <EditText
+        android:id="@+id/enter_shoe_name_text"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_7x"
+        android:hint="@string/enter_shoe_name"
+        android:inputType="text"
+        android:textColorHint="#757575"
+        app:layout_constraintTop_toBottomOf="@id/shoe_name_text"
+        app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline"
+        app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
+        tools:ignore="TextFields"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/company_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/company"
+        android:layout_marginTop="@dimen/space_4x"
+        android:padding="@dimen/space_2x"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/enter_shoe_name_text"
+        app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
+        app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline" />
+
+    <EditText
+        android:id="@+id/enter_company_text"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_7x"
+        android:hint="@string/enter_company"
+        android:inputType="text"
+        android:textColorHint="#757575"
+        app:layout_constraintTop_toBottomOf="@id/company_text"
+        app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline"
+        app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
+        tools:ignore="TextFields"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/shoe_size_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/shoe_size"
+        android:layout_marginTop="@dimen/space_4x"
+        android:padding="@dimen/space_2x"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/enter_company_text"
+        app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
+        app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline" />
+
+    <EditText
+        android:id="@+id/enter_shoe_size_text"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_7x"
+        android:hint="@string/enter_shoe_size"
+        android:inputType="number"
+        android:textColorHint="#757575"
+        app:layout_constraintTop_toBottomOf="@id/shoe_size_text"
+        app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline"
+        app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
+        tools:ignore="TextFields"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:layout_marginTop="@dimen/space_4x"
+        android:padding="@dimen/space_2x"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/enter_shoe_size_text"
+        app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
+        app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline" />
+
+
+    <EditText
+        android:id="@+id/enter_description_text"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_7x"
+        android:hint="@string/enter_a_description_of_the_shoes"
+        android:inputType="text"
+        android:textColorHint="#757575"
+        app:layout_constraintTop_toBottomOf="@id/description_text"
+        app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline"
+        app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
+        tools:ignore="TextFields"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4x"
+        android:layout_marginEnd="@dimen/space_2x"
+        android:text="@string/cancel"
+        app:layout_constraintTop_toBottomOf="@id/enter_description_text"
+        app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/save_button" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/save"
+        app:layout_constraintTop_toTopOf="@id/cancel_button"
+        app:layout_constraintBottom_toBottomOf="@id/cancel_button"
+        app:layout_constraintStart_toEndOf="@id/cancel_button"
+        app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

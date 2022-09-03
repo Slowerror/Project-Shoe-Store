@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Shoe Store</string>
+    <string name="email_address">Email address</string>
+    <string name="enter_email_address">Enter email address</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter password</string>
+    <string name="create_new_login">create new login</string>
+    <string name="login">login</string>
+    <string name="welcome_to_shoe_store">Welcome to Shoe Store, Stranger!</string>
+    <string name="this_is_the_welcome_page">This is the welcome page</string>
+    <string name="go_to_instructions">Go to instructions</string>
+    <string name="this_is_the_instructions_page">This is the instructions page</string>
+    <string name="this_is_exactly_the_instruction_page">This is exactly the instruction page!</string>
+    <string name="there_should_be_instructions">There should be instructions here, but Phil Spencer stole them.</string>
+    <string name="shoes_list">shoes list</string>
+    <string name="add_shoes">Add shoes</string>
+    <string name="save">save</string>
+    <string name="cancel">Cancel</string>
+    <string name="shoe_name">Shoe name</string>
+    <string name="enter_shoe_name">Enter shoe name</string>
+    <string name="company">Company</string>
+    <string name="enter_company">Enter company</string>
+    <string name="shoe_size">Shoe size</string>
+    <string name="enter_shoe_size">Enter shoe size</string>
+    <string name="description">Description</string>
+    <string name="enter_a_description_of_the_shoes">Enter a description of the shoes</string>
 </resources>
