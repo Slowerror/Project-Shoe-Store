@@ -24,4 +24,5 @@
     <string name="enter_shoe_size">Enter shoe size</string>
     <string name="description">Description</string>
     <string name="enter_a_description_of_the_shoes">Enter a description of the shoes</string>
+    <string name="logout">Logout</string>
 </resources>

@@ -2,6 +2,7 @@ package com.bignerdranch.android.shoestore
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -34,5 +35,6 @@ class LoginFragment : Fragment() {
             findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
         }
     }
+
 
 }

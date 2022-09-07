@@ -29,5 +29,11 @@ class ShoeDetailsFragment : Fragment() {
         binding.cancelButton.setOnClickListener {
             findNavController().popBackStack()
         }
+
+        binding.saveButton.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
+
+
 }
