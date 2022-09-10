@@ -50,11 +50,12 @@ class ShoeDetailsFragment : Fragment() {
         val company = newShoe?.company.toString()
         val description = newShoe?.description.toString()
 
-        if (name.isNotEmpty() || company.isNotEmpty() || size.isNotEmpty() || description.isNotEmpty()) {
+        if (name.isEmpty() || company.isEmpty() || size.isEmpty() || description.isEmpty()) {
+            Toast.makeText(context, "Заполните все поля!", Toast.LENGTH_SHORT).show()
+        } else {
             viewModel.addShoe(name, company, size, description)
             findNavController().navigate(R.id.action_shoeDetailsFragment_to_shoesListFragment)
-        } else {
-            Toast.makeText(context, "Заполните все поля!", Toast.LENGTH_SHORT).show()
+
         }
 
     }
