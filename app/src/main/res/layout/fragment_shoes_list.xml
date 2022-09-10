@@ -2,29 +2,41 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ShoesListFragment">
+    tools:context=".screens.ShoesListFragment">
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/add_shoes_fab"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/containerShoeList"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/space_4x"
-                android:layout_gravity="bottom|end"
-                android:src="@drawable/ic_plus_24"
-                app:fabSize="auto"
-                android:contentDescription="@string/add_shoes" />
+                android:orientation="vertical">
+            </LinearLayout>
 
-        </LinearLayout>
+        </ScrollView>
 
-    </ScrollView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_4x"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/ic_plus_24"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:fabSize="auto"
+            android:contentDescription="@string/add_shoes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </layout>

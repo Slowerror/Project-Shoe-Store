@@ -1,13 +1,13 @@
-package com.bignerdranch.android.shoestore
+package com.bignerdranch.android.shoestore.screens
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.bignerdranch.android.shoestore.R
 import com.bignerdranch.android.shoestore.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {

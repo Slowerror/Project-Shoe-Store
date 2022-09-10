@@ -3,7 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ShoeDetailsFragment">
+    tools:context=".screens.ShoeDetailsFragment">
+
+    <data>
+        <variable
+            name="shoeData"
+            type="com.bignerdranch.android.shoestore.model.Shoe" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -38,8 +44,10 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/space_7x"
         android:hint="@string/enter_shoe_name"
+        android:text="@={shoeData.name}"
         android:inputType="text"
         android:textColorHint="#757575"
+        android:imeOptions="actionNext"
         app:layout_constraintTop_toBottomOf="@id/shoe_name_text"
         app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline"
         app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
@@ -62,9 +70,11 @@
         android:id="@+id/enter_company_text"
         android:layout_width="0dp"
         android:layout_height="@dimen/space_7x"
+        android:text="@={shoeData.company}"
         android:hint="@string/enter_company"
         android:inputType="text"
         android:textColorHint="#757575"
+        android:imeOptions="actionNext"
         app:layout_constraintTop_toBottomOf="@id/company_text"
         app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline"
         app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
@@ -87,9 +97,12 @@
         android:id="@+id/enter_shoe_size_text"
         android:layout_width="0dp"
         android:layout_height="@dimen/space_7x"
+        android:text="@={shoeData.size}"
         android:hint="@string/enter_shoe_size"
-        android:inputType="number"
+        android:inputType="numberDecimal"
+        android:ems="10"
         android:textColorHint="#757575"
+        android:imeOptions="actionNext"
         app:layout_constraintTop_toBottomOf="@id/shoe_size_text"
         app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline"
         app:layout_constraintStart_toStartOf="@id/left_vertical_guideline"
@@ -113,8 +126,10 @@
         android:id="@+id/enter_description_text"
         android:layout_width="0dp"
         android:layout_height="@dimen/space_7x"
+        android:text="@={shoeData.description}"
         android:hint="@string/enter_a_description_of_the_shoes"
         android:inputType="text"
+        android:imeOptions="actionDone"
         android:textColorHint="#757575"
         app:layout_constraintTop_toBottomOf="@id/description_text"
         app:layout_constraintEnd_toEndOf="@id/right_vertical_guideline"

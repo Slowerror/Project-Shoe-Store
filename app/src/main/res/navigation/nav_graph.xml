@@ -6,7 +6,7 @@
     app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.bignerdranch.android.shoestore.LoginFragment"
+        android:name="com.bignerdranch.android.shoestore.screens.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.bignerdranch.android.shoestore.WelcomeFragment"
+        android:name="com.bignerdranch.android.shoestore.screens.WelcomeFragment"
         android:label="Welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/instructionsFragment"
-        android:name="com.bignerdranch.android.shoestore.InstructionsFragment"
+        android:name="com.bignerdranch.android.shoestore.screens.InstructionsFragment"
         android:label="Instructions"
         tools:layout="@layout/fragment_instructions" >
         <action
@@ -33,19 +33,16 @@
     </fragment>
     <fragment
         android:id="@+id/shoesListFragment"
-        android:name="com.bignerdranch.android.shoestore.ShoesListFragment"
+        android:name="com.bignerdranch.android.shoestore.screens.ShoesListFragment"
         android:label="Shoes listing"
         tools:layout="@layout/fragment_shoes_list" >
         <action
             android:id="@+id/action_shoesListFragment_to_shoeDetailsFragment"
             app:destination="@id/shoeDetailsFragment" />
-        <action
-            android:id="@+id/action_shoesListFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/shoeDetailsFragment"
-        android:name="com.bignerdranch.android.shoestore.ShoeDetailsFragment"
+        android:name="com.bignerdranch.android.shoestore.screens.ShoeDetailsFragment"
         android:label="Shoe details"
         tools:layout="@layout/fragment_shoe_details" >
         <action
