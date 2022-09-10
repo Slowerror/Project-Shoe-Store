@@ -22,6 +22,6 @@
     <string name="size_shoe_subtitle_text">Shoe size</string>
     <string name="enter_shoe_size_hint">Enter shoe size</string>
     <string name="description_subtitle_text">Description</string>
-    <string name="enter_a_description_hint">Enter a description</string>
+    <string name="enter_a_description_hint">Enter description</string>
     <string name="logout">Logout</string>
 </resources>

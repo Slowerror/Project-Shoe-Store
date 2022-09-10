@@ -12,12 +12,8 @@ class ShoeSharedViewModel : ViewModel() {
         get() = _shoes
 
     private var shoeList = mutableListOf<Shoe>()
-//    private var shoeItem = Shoe("Jordan", "Nike", "43.0", "very good shoes")
-
 
     init {
-//        Log.i("ViewModel", "viewModel is called")
-//        shoeList.add(shoeItem)
         _shoes.value = shoeList
     }
 

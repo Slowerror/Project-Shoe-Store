@@ -44,11 +44,11 @@ class ShoeDetailsFragment : Fragment() {
     }
 
     private fun onSave() {
-        val bindingData = binding.shoeData
-        val name = bindingData?.name.toString()
-        val size = bindingData?.size.toString()
-        val company = bindingData?.company.toString()
-        val description = bindingData?.description.toString()
+        val newShoe = binding.shoeData
+        val name = newShoe?.name.toString()
+        val size = newShoe?.size.toString()
+        val company = newShoe?.company.toString()
+        val description = newShoe?.description.toString()
 
         if (name.isNotEmpty() || company.isNotEmpty() || size.isNotEmpty() || description.isNotEmpty()) {
             viewModel.addShoe(name, company, size, description)

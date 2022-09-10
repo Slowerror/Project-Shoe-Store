@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance" parent="android:TextAppearance" />
+
+    <style name="TextAppearance.H1">
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_extra_title</item>
+    </style>
+
+    <style name="TextAppearance.H2">
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_extra_subtitle</item>
+    </style>
+
+    <style name="TextAppearance.H4">
+        <item name="android:textSize">@dimen/text_size_body</item>
+    </style>
+
+    <style name="TextAppearance.H5">
+        <item name="android:textSize">@dimen/text_size_description</item>
+    </style>
+
+</resources>

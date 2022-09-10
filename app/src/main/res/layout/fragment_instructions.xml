@@ -16,12 +16,12 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/instruction_title_text"
-            android:textSize="@dimen/text_size_title"
             app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/instructionBody"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/TextAppearance.H1" />
 
         <TextView
             android:id="@+id/instructionBody"
@@ -30,12 +30,12 @@
             android:layout_marginTop="@dimen/space_5x"
             android:gravity="center"
             android:text="@string/instruction_body_text"
-            android:textSize="@dimen/text_size_body"
             app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintTop_toBottomOf="@id/instructionTitle"
             app:layout_constraintBottom_toTopOf="@id/buttonShoesList"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/TextAppearance.H4"/>
 
         <Button
             android:id="@+id/buttonShoesList"

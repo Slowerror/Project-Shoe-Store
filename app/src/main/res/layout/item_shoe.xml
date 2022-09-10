@@ -13,12 +13,12 @@
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/space_4x"
-        app:strokeWidth="1dp"
-        app:strokeColor="@color/purple_500"
-        app:cardCornerRadius="10dp"
-
-        app:cardElevation="10dp">
+        android:layout_marginStart="@dimen/space_4x"
+        android:layout_marginEnd="@dimen/space_4x"
+        android:layout_marginTop="@dimen/space_2x"
+        android:layout_marginBottom="@dimen/space_2x"
+        app:cardCornerRadius="@dimen/space_3x"
+        app:cardElevation="@dimen/space_0_5x">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -29,48 +29,56 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/space_2x"
+                android:layout_marginStart="@dimen/space_2x"
                 android:text="@={shoeData.name}"
                 tools:text="Shoe name"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/sizeShoe" />
+                app:layout_constraintEnd_toStartOf="@id/sizeShoe"
+                style="@style/TextAppearance.H2" />
 
             <TextView
                 android:id="@+id/nameCompany"
+                style="@style/TextAppearance.H4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_2x"
                 android:padding="@dimen/space_2x"
                 android:text="@={shoeData.company}"
-                tools:text="Company name"
-                app:layout_constraintTop_toBottomOf="@id/nameShoe"
+                android:textColor="#A1887F"
+                app:layout_constraintEnd_toEndOf="@id/nameShoe"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/sizeShoe"/>
+                app:layout_constraintTop_toBottomOf="@id/nameShoe"
+                tools:text="Company name" />
 
             <TextView
                 android:id="@+id/sizeShoe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/space_2x"
+                android:padding="@dimen/space_4x"
                 android:text="@={shoeData.size}"
-                android:textSize="24sp"
-                android:textColor="@color/purple_700"
-                android:textStyle="bold"
+                android:textSize="@dimen/text_size_body"
                 tools:text="Shoe size"
                 app:layout_constraintTop_toTopOf="@id/nameShoe"
                 app:layout_constraintBottom_toBottomOf="@id/nameCompany"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/nameShoe"
+                style="@style/TextAppearance.H4" />
 
             <TextView
                 android:id="@+id/descriptionShoe"
+                style="@style/TextAppearance.H5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_2x"
                 android:padding="@dimen/space_2x"
                 android:text="@={shoeData.description}"
-                tools:text="Description"
-                app:layout_constraintTop_toBottomOf="@id/nameCompany"
+                android:textColor="#757575"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/nameCompany"
+                tools:text="Description" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

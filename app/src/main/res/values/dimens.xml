@@ -10,8 +10,11 @@
     <dimen name="space_7x">64dp</dimen>
     <dimen name="space_8x">128dp</dimen>
 
-    <dimen name="text_size_description">8sp</dimen>
-    <dimen name="text_size_body">12sp</dimen>
-    <dimen name="text_size_subtitle">14sp</dimen>
-    <dimen name="text_size_title">40sp</dimen>
+    <dimen name="text_size_description">12sp</dimen>
+    <dimen name="text_size_body">18sp</dimen>
+    <dimen name="text_size_subtitle">24sp</dimen>
+    <dimen name="text_size_title">32sp</dimen>
+
+    <dimen name="line_spacing_extra_title">18sp</dimen>
+    <dimen name="line_spacing_extra_subtitle">12sp</dimen>
 </resources>
