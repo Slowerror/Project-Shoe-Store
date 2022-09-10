@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.ShoeDetailsFragment">
+
+    <data>
+        <variable
+            name="shoeData"
+            type="com.bignerdranch.android.shoestore.models.Shoe" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/space_4x"
+        android:layout_marginEnd="@dimen/space_4x">
+
+        <TextView
+            android:id="@+id/shoeNameSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/shoe_name_subtitle_text"
+            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/layoutShoeName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/TextAppearance.H2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutShoeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2x"
+            android:hint="@string/enter_shoe_name_hint"
+            app:layout_constraintTop_toBottomOf="@id/shoeNameSubtitle"
+            app:layout_constraintBottom_toTopOf="@id/companySubtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textShoeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={shoeData.name}"
+                android:inputType="text"
+                android:imeOptions="actionNext" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/companySubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4x"
+            android:text="@string/company_subtitle_text"
+            app:layout_constraintTop_toBottomOf="@id/layoutShoeName"
+            app:layout_constraintBottom_toTopOf="@id/layoutCompany"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/TextAppearance.H2"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2x"
+            android:hint="@string/enter_company_hint"
+            app:layout_constraintTop_toBottomOf="@id/companySubtitle"
+            app:layout_constraintBottom_toTopOf="@id/sizeShoeSubtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={shoeData.company}"
+                android:inputType="text"
+                android:imeOptions="actionNext" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/sizeShoeSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4x"
+            android:text="@string/size_shoe_subtitle_text"
+            app:layout_constraintTop_toBottomOf="@id/layoutCompany"
+            app:layout_constraintBottom_toTopOf="@id/layoutShoeSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/TextAppearance.H2"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutShoeSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2x"
+            android:hint="@string/enter_shoe_size_hint"
+            app:layout_constraintTop_toBottomOf="@id/sizeShoeSubtitle"
+            app:layout_constraintBottom_toTopOf="@id/descriptionSubtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textShoeSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={shoeData.size}"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionNext" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/descriptionSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/description_subtitle_text"
+            android:layout_marginTop="@dimen/space_4x"
+            app:layout_constraintTop_toBottomOf="@id/layoutShoeSize"
+            app:layout_constraintBottom_toTopOf="@id/layoutDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/TextAppearance.H2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2x"
+            android:hint="@string/enter_a_description_hint"
+            app:layout_constraintTop_toBottomOf="@id/descriptionSubtitle"
+            app:layout_constraintBottom_toTopOf="@id/buttonCancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={shoeData.description}"
+                android:inputType="text"
+                android:imeOptions="actionDone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_5x"
+            android:layout_marginEnd="@dimen/space_4x"
+            android:text="@string/cancel_action"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintTop_toBottomOf="@id/layoutDescription"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonSave" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/save_action"
+            app:layout_constraintTop_toTopOf="@id/buttonCancel"
+            app:layout_constraintBottom_toBottomOf="@id/buttonCancel"
+            app:layout_constraintStart_toEndOf="@id/buttonCancel"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

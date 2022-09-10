@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="shoeData"
+            type="com.bignerdranch.android.shoestore.models.Shoe" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_4x"
+        android:layout_marginEnd="@dimen/space_4x"
+        android:layout_marginTop="@dimen/space_2x"
+        android:layout_marginBottom="@dimen/space_2x"
+        app:cardCornerRadius="@dimen/space_3x"
+        app:cardElevation="@dimen/space_0_5x">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nameShoe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_2x"
+                android:layout_marginStart="@dimen/space_2x"
+                android:text="@={shoeData.name}"
+                tools:text="Shoe name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/sizeShoe"
+                style="@style/TextAppearance.H2" />
+
+            <TextView
+                android:id="@+id/nameCompany"
+                style="@style/TextAppearance.H4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_2x"
+                android:padding="@dimen/space_2x"
+                android:text="@={shoeData.company}"
+                android:textColor="#A1887F"
+                app:layout_constraintEnd_toEndOf="@id/nameShoe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameShoe"
+                tools:text="Company name" />
+
+            <TextView
+                android:id="@+id/sizeShoe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_4x"
+                android:text="@={shoeData.size}"
+                android:textSize="@dimen/text_size_body"
+                tools:text="Shoe size"
+                app:layout_constraintTop_toTopOf="@id/nameShoe"
+                app:layout_constraintBottom_toBottomOf="@id/nameCompany"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/nameShoe"
+                style="@style/TextAppearance.H4" />
+
+            <TextView
+                android:id="@+id/descriptionShoe"
+                style="@style/TextAppearance.H5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_2x"
+                android:padding="@dimen/space_2x"
+                android:text="@={shoeData.description}"
+                android:textColor="#757575"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameCompany"
+                tools:text="Description" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
