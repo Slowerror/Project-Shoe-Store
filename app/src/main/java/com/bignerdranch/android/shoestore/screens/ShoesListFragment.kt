@@ -2,13 +2,18 @@ package com.bignerdranch.android.shoestore.screens
 
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
+import androidx.activity.addCallback
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
+import androidx.navigation.NavHost
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.bignerdranch.android.shoestore.R
 import com.bignerdranch.android.shoestore.databinding.FragmentShoesListBinding
 import com.bignerdranch.android.shoestore.databinding.ItemShoeBinding
@@ -19,6 +24,12 @@ class ShoesListFragment : Fragment() {
 
     private lateinit var binding: FragmentShoesListBinding
     private val viewModel: ShoeSharedViewModel by activityViewModels()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        requireActivity().onBackPressedDispatcher.addCallback(this) {}
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
