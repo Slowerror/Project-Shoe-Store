@@ -1,8 +1,6 @@
-package com.bignerdranch.android.shoestore.model
+package com.bignerdranch.android.shoestore.models
 
 import android.os.Parcelable
-import androidx.databinding.BaseObservable
-import androidx.databinding.Bindable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

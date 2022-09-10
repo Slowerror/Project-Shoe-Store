@@ -6,7 +6,7 @@
     <data>
         <variable
             name="shoeData"
-            type="com.bignerdranch.android.shoestore.model.Shoe" />
+            type="com.bignerdranch.android.shoestore.models.Shoe" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

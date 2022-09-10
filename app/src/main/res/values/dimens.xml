@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="space_0_5x">2dp</dimen>
-    <dimen name="space_1x">4dp</dimen>
-    <dimen name="space_2x">8dp</dimen>
-    <dimen name="space_3x">12dp</dimen>
+    <dimen name="space_0_5x">1dp</dimen>
+    <dimen name="space_1x">2dp</dimen>
+    <dimen name="space_2x">4dp</dimen>
+    <dimen name="space_3x">8dp</dimen>
     <dimen name="space_4x">16dp</dimen>
-    <dimen name="space_5x">24dp</dimen>
-    <dimen name="space_6x">32dp</dimen>
-    <dimen name="space_7x">48dp</dimen>
-    <dimen name="space_8x">64dp</dimen>
+    <dimen name="space_5x">32dp</dimen>
+    <dimen name="space_6x">48dp</dimen>
+    <dimen name="space_7x">64dp</dimen>
+    <dimen name="space_8x">128dp</dimen>
 
     <dimen name="text_size_description">8sp</dimen>
     <dimen name="text_size_body">12sp</dimen>
     <dimen name="text_size_subtitle">14sp</dimen>
-    <dimen name="text_size_headline">40sp</dimen>
+    <dimen name="text_size_title">40sp</dimen>
 </resources>

@@ -11,7 +11,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.bignerdranch.android.shoestore.R
 import com.bignerdranch.android.shoestore.databinding.FragmentShoeDetailsBinding
-import com.bignerdranch.android.shoestore.model.Shoe
+import com.bignerdranch.android.shoestore.models.Shoe
+import com.bignerdranch.android.shoestore.viewModels.ShoeSharedViewModel
 
 class ShoeDetailsFragment : Fragment() {
 
@@ -33,11 +34,11 @@ class ShoeDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.cancelButton.setOnClickListener {
-            findNavController().popBackStack()
+        binding.buttonCancel.setOnClickListener {
+            findNavController().navigate(R.id.action_shoeDetailsFragment_to_shoesListFragment)
         }
 
-        binding.saveButton.setOnClickListener {
+        binding.buttonSave.setOnClickListener {
             onSave()
         }
     }
@@ -51,7 +52,7 @@ class ShoeDetailsFragment : Fragment() {
 
         if (name.isNotEmpty() || company.isNotEmpty() || size.isNotEmpty() || description.isNotEmpty()) {
             viewModel.addShoe(name, company, size, description)
-            findNavController().popBackStack()
+            findNavController().navigate(R.id.action_shoeDetailsFragment_to_shoesListFragment)
         } else {
             Toast.makeText(context, "Заполните все поля!", Toast.LENGTH_SHORT).show()
         }

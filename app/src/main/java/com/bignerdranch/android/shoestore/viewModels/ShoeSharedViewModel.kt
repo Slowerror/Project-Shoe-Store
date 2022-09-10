@@ -1,10 +1,9 @@
-package com.bignerdranch.android.shoestore.screens
+package com.bignerdranch.android.shoestore.viewModels
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.bignerdranch.android.shoestore.model.Shoe
+import com.bignerdranch.android.shoestore.models.Shoe
 
 class ShoeSharedViewModel : ViewModel() {
 

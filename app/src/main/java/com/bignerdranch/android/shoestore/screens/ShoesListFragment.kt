@@ -1,7 +1,6 @@
 package com.bignerdranch.android.shoestore.screens
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
@@ -9,13 +8,12 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.bignerdranch.android.shoestore.R
 import com.bignerdranch.android.shoestore.databinding.FragmentShoesListBinding
 import com.bignerdranch.android.shoestore.databinding.ItemShoeBinding
-import com.bignerdranch.android.shoestore.model.Shoe
+import com.bignerdranch.android.shoestore.models.Shoe
+import com.bignerdranch.android.shoestore.viewModels.ShoeSharedViewModel
 
 class ShoesListFragment : Fragment() {
 
@@ -39,7 +37,7 @@ class ShoesListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.fabBtn.setOnClickListener {
+        binding.buttonFab.setOnClickListener {
             findNavController().navigate(R.id.action_shoesListFragment_to_shoeDetailsFragment)
         }
 
